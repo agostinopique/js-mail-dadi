@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3535EC;
+}
+
+.ap-container {
+    height: 100vh;
+}
+
+.ap-button {
+    display: none;
+}
+
+.disapear {
+    display: none !important;
+}
+
+.player {
+    margin-right: 10px;
+}
