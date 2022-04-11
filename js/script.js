@@ -85,8 +85,16 @@ randomBtn.addEventListener('click', function() {
     risultatiEst.innerHTML = `<div class="col-6">${randomUser}</div> <div class="col-6">${randomComputer}</div>`
 
     if(randomComputer < randomUser) {
-        annunciaWin.innerHTML = 'Hai perso!';
-    } else {
+
+        annunciaWin.innerHTML = 'Hai Perso!';
+
+    } else if (randomComputer > randomUser){
+
         annunciaWin.innerHTML = 'Hai Vinto!';
+
+    }   else{
+
+        annunciaWin.innerHTML = 'Pareggio!';
+
     }
 })

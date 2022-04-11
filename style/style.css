@@ -5,14 +5,17 @@
 }
 
 body {
+    height: 100vh;
+    background-color: #3535EC;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3535EC;
 }
 
 .ap-container {
-    height: 100vh;
+    height: 60vh;
+    background-color: #4c4ca7;
+    border-radius: 10px;
 }
 
 .ap-button {
