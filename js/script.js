@@ -1,5 +1,3 @@
-console.log('Hello world');
-
 /* LOGICA A STEP
 
     MAIL
@@ -28,10 +26,12 @@ let userMail = prompt('Inserisci la tua mail per la verifica');
 
 let responseMessage = document.getElementById('alert');
 
+// Verifico la mail inserit con la lista di mail autorizzate
 let mailVerification = false;
 
 for(let i = 0; i < mailList.length; i++) {
     
+    console.log(mailList[i]);
     if(userMail === mailList[i]) {
         mailVerification = true;
     } 
@@ -46,6 +46,8 @@ const playButton = document.getElementById('play_btn');
 
 const playArea = document.querySelector('.play_area');
 
+
+// Messaggio di risposta della verifica
 if(mailVerification === true) {
 
     responseMessage.innerHTML = 'Benvenuto al Gioco dei Dadi';
@@ -72,6 +74,7 @@ const randomBtn = document.querySelector('#random_btn');
 
 const annunciaWin = document.querySelector('.winner_container');
 
+// A click estraggo un numero per il computer e per l'utente
 randomBtn.addEventListener('click', function() {
 
     let randomComputer = Math.floor((Math.random() * 6) + 1);
@@ -84,6 +87,7 @@ randomBtn.addEventListener('click', function() {
     
     risultatiEst.innerHTML = `<div class="col-6">${randomUser}</div> <div class="col-6">${randomComputer}</div>`
 
+    // Verifico e annuncio il vincitore 
     if(randomComputer < randomUser) {
 
         annunciaWin.innerHTML = 'Hai Perso!';
